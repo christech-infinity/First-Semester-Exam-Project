@@ -1,0 +1,227 @@
+:root {
+  --brand: #4f3ddb;
+  --brand-dark: #3f2fc0;
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --cream: #fff4e3;
+  --tint: #f1f0fd;
+  --border: #dcdce4;
+  --font: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.5;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4, p { margin: 0; }
+
+a:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  height: 46px;
+  border-radius: 6px;
+  font: 500 15px/1 var(--font);
+  border: 1.5px solid var(--brand);
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+.btn-primary { background: var(--brand); color: #fff; }
+.btn-primary:hover { background: var(--brand-dark); }
+.btn-outline { background: #fff; color: var(--ink); }
+.btn-outline:hover { background: var(--tint); }
+
+.logo {
+  font-family: "DM Sans", sans-serif;;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: var(--brand);
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 52px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+.nav-links { display: flex; gap: 22px; font-size: 14px; font-weight: 500; }
+.nav-links a:hover { color: var(--brand); }
+.nav-actions { display: flex; gap: 16px; }
+.nav-actions .btn { height: 40px; min-width: 112px; }
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 545px;
+  display: flex;
+  align-items: center;
+  padding: 0 163px;
+  color: #fff;
+  background:
+    linear-gradient(rgba(40, 40, 50, .62), rgba(40, 40, 50, .62)),
+    url("images/slide_pic.jpg") center / cover no-repeat,
+    #6b6d70;
+}
+.hero-content { max-width: 660px; }
+.hero h1 { font-size: 36px; font-weight: 500; line-height: 1.45; }
+.hero p { font-size: 18px; margin: 18px 0 28px; max-width: 540px; }
+
+/* ---------- About ---------- */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 68px 52px 80px;
+}
+.about-text { flex: 1 1 480px; max-width: 485px; }
+.about h2 { font-size: 36px; font-weight: 500; margin-bottom: 40px; }
+.about p { font-size: 14px; line-height: 1.75; }
+.about-img {
+  flex: 0 0 356px;
+  width: 356px;
+  height: 287px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #d9d3c7;
+}
+
+/* ---------- Why join ---------- */
+.why { padding: 0 143px 80px; }
+.why h2 { font-size: 36px; font-weight: 700; margin-bottom: 34px; }
+.why-intro { font-size: 14px; line-height: 1.5; max-width: 740px; margin: 0 auto 0 0; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  margin-top: 36px;
+}
+.card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px 24px;
+  min-height: 230px;
+}
+.card .icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: var(--tint);
+  display: grid;
+  place-items: center;
+  color: #2d2d3a;
+  margin-bottom: 8px;
+}
+.card h3 { font-size: 18px; font-weight: 500; margin-bottom: 10px; }
+.card p { font-size: 14px; line-height: 1.55; color: var(--muted); }
+
+/* ---------- Testimonial ---------- */
+.testimonial {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 70px 52px 70px 60px;
+  background: var(--cream);
+}
+.avatar-lg {
+  flex: 0 0 213px;
+  width: 213px;
+  height: 213px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #b9b3a6;
+}
+.testimonial-body { flex: 1; }
+.testimonial blockquote { margin: 0; font-size: 14px; line-height: 1.5; }
+.author { margin: 42px 0 20px; font-size: 14px; }
+.author strong { font-size: 18px; font-weight: 500; }
+
+/* ---------- CTA ---------- */
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 68px 52px 70px;
+}
+.avatars { position: relative; flex: 0 0 400px; height: 300px; }
+.av {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #c9c6c0;
+}
+.av1 { top: 0; left: 59px; }
+.av2 { top: 90px; left: 200px; }
+.av3 { top: 180px; left: 59px; }
+.cta-text { flex: 1; max-width: 530px; }
+.cta h2 { font-size: 36px; font-weight: 500; line-height: 1.45; margin-bottom: 22px; }
+.cta p { font-size: 14px; margin-bottom: 20px; max-width: 420px; }
+.cta .btn { height: 40px; }
+
+/* ---------- Footer ---------- */
+.footer {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 50px 52px 110px 58px;
+  background: var(--cream);
+}
+.footer .logo { font-size: 34px; align-self: start; }
+.footer-col { display: flex; flex-direction: column; gap: 14px; font-size: 14px; }
+.footer-col h4 { font-size: 18px; font-weight: 500; margin-bottom: 6px; }
+.footer-col a:hover { color: var(--brand); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .hero { padding: 0 60px; }
+  .why { padding: 0 52px 70px; }
+  .cards { gap: 20px; }
+  .about { gap: 32px; }
+}
+
+@media (max-width: 800px) {
+  .navbar { flex-wrap: wrap; padding: 14px 20px; }
+  .nav-links { order: 3; width: 100%; justify-content: center; }
+  .hero { min-height: 440px; padding: 0 24px; }
+  .hero h1 { font-size: 28px; }
+  .about { flex-direction: column; align-items: stretch; padding: 48px 24px; }
+  .about-text { max-width: none; flex-basis: auto; }
+  .about-img { flex: none; width: 100%; height: auto; aspect-ratio: 356 / 287; }
+  .why { padding: 0 24px 56px; }
+  .why h2, .about h2, .cta h2 { font-size: 28px; }
+  .cards { grid-template-columns: 1fr; }
+  .testimonial { flex-direction: column; align-items: center; padding: 48px 24px; }
+  .cta { flex-direction: column; padding: 48px 24px; }
+  .avatars { flex: none; width: 100%; max-width: 360px; height: 300px; }
+  .footer { grid-template-columns: 1fr 1fr; padding: 40px 24px 60px; }
+  .footer .logo { grid-column: 1 / -1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
